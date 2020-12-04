@@ -14,7 +14,11 @@ protected:
 	string sex;
 	int cost;
 public:
-	Clothes(string color = "", string material = "", string sex = "", int cost = 0)
+	Clothes()
+	{
+
+	}
+	Clothes(string color , string material , string sex, int cost)
 	{
 		this->color = color;
 		this->material = material;
@@ -41,6 +45,7 @@ public:
 	{
 		this->cost = cost;
 	}
+
 };
 
 class Shoes : public Clothes
@@ -48,11 +53,25 @@ class Shoes : public Clothes
 protected:
 	int size;
 	string firm;
+	string Mat;
+	
 public:
-	Shoes(string color = "", string material = "", string sex = "", int cost = 0, int size = 0, string firm = "") : Clothes(color, material, sex, cost)
+	Shoes()
+	{
+
+	}
+	Shoes(string color, string material, string sex , int cost, int size, string firm ) : Clothes(color, material, sex, cost)
 	{
 		this->size = size;
 		this->firm = firm;
+
+	}
+
+	void setMat(string Mat)
+	{
+		this->Mat = Mat;
+		cout << Mat;
+
 	}
 
 	void setSize(int size)
@@ -77,8 +96,13 @@ protected:
 	int height;
 	int width;
 	string vidIspolzovaniya;
+
 public:
-	Trousers(string color = "", string material = "", string sex = "", int cost = 0, int height = 0, int width = 0, string vidIspolzovaniya = "") : Clothes(color, material, sex, cost)
+	Trousers()
+	{
+
+	}
+	Trousers(string color, string material , string sex , int cost, int height , int width , string vidIspolzovaniya ) : Clothes(color, material, sex, cost)
 	{
 		this->height = height;
 		this->width = width;
@@ -112,7 +136,11 @@ protected:
 	string season;
 	string model;
 public:
-	Hat(string color = "", string material = "", string sex = "", int cost = 0, string season = "", string model = "") : Clothes(color, material, sex, cost)
+	Hat()
+	{
+
+	}
+	Hat(string color , string material , string sex , int cost, string season , string model ) : Clothes(color, material, sex, cost)
 	{
 		this->season = season;
 		this->model = model;
